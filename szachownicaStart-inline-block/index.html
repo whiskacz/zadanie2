@@ -6,7 +6,8 @@ Zrób szachownicę na 3 różne sposoby
 
 W zadaniu 1 zrób inline-block
 
-Dodatkowo wycentruj cały kontener (div z klasą 'board') i określ jego wielkości tak by był on kwadratem, który ma 30% szerokości okna przeglądarki i dodatkowo border: 10px czarny.
+Dodatkowo wycentruj cały kontener (div z klasą 'board') i określ jego wielkości tak
+ by był on kwadratem, który ma 30% szerokości okna przeglądarki i dodatkowo border: 10px czarny.
 
 Tekst ma być pod szachownicą.
 
@@ -19,7 +20,42 @@ Tekst ma być pod szachownicą.
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Szachownica Inline-block</title>
-    <style></style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: content-box;
+            --ChessboardSize: 30vw;
+        }
+        .board{
+            
+            width: var(--ChessboardSize);
+            height: var(--ChessboardSize);
+            background-color: red;
+            margin: calc((100vw - var(--ChessboardSize))/2)calc((100vw - var(--ChessboardSize))/2) 5vw;
+            border: 10px solid black;
+            font-size: 0;   
+        }
+        span{
+            display: inline-block;
+            width: 50%;
+            height: 50%;
+            
+            
+        }
+        span:nth-child(2){
+            background-color: white;
+        }
+        span:nth-child(3){
+            background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: lowercase;
+        }
+    </style>
 </head>
 
 <body>
